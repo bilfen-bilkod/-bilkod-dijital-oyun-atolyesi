@@ -1,0 +1,50 @@
+name: "BİLKOD - Yeni Oyun Yayınlama"
+description: "BİLKOD Dijital Oyun Atölyesi'ne yeni oyun ekleme isteği"
+title: "[BİLKOD OYUN] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Yalnızca bilfen-bilkod hesabının açtığı oyun istekleri otomatik yayınlanır.**
+        Bilgileri kontrol edip alttaki **Submit new issue** düğmesine basın.
+        Oyun bağlantısı önceden GitHub Pages'te yayınlanmış olmalıdır.
+  - type: input
+    id: oyun_adi
+    attributes:
+      label: Oyun adı
+      placeholder: Uzayda Kodlama
+    validations:
+      required: true
+  - type: input
+    id: oyun_baglantisi
+    attributes:
+      label: Oyun bağlantısı
+      description: Yalnızca bilfen-bilkod.github.io altındaki oyun adresleri kabul edilir.
+      placeholder: https://bilfen-bilkod.github.io/uzayda-kodlama/
+    validations:
+      required: true
+  - type: input
+    id: kategori
+    attributes:
+      label: Kategori
+      placeholder: Kodlama
+    validations:
+      required: true
+  - type: input
+    id: yas_gruplari
+    attributes:
+      label: Yaş grupları
+      description: İsteğe bağlı; birden fazla değer için virgül kullanın.
+      placeholder: 4–5 yaş, 5–6 yaş
+  - type: textarea
+    id: aciklama
+    attributes:
+      label: Açıklama
+      description: Oyunu anlatan kısa bir cümle.
+      placeholder: Komutları sırala ve karakteri hedefe ulaştır.
+  - type: input
+    id: kapak_gorseli
+    attributes:
+      label: Kapak görseli
+      description: Mevcut bir assets/covers/*.svg dosyası veya herkese açık HTTPS görsel adresi. Boş bırakılabilir.
+      placeholder: assets/covers/yeni-oyun.svg
