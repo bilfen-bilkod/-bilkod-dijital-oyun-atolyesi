@@ -111,6 +111,18 @@
       "addedAt": "2026-11-04",
       "isNew": true,
       "published": true
+    },
+    {
+      "id": "botley-ile-kesfet",
+      "title": "Botley ile Keşfet",
+      "description": "Botley ile rakamları, gezegenleri ve mevsimleri keşfet! Renkli kumanda kartlarıyla 3 dünyada 30 seviyelik dokunmatik kodlama macerası.",
+      "category": "Kodlama",
+      "ageGroups": [],
+      "url": "https://bilfen-bilkod.github.io/BOTLEY--ILE-KESFET/",
+      "cover": "assets/covers/botley-ile-kesfet.svg",
+      "addedAt": "2026-11-04",
+      "isNew": true,
+      "published": true
     }
   ]
 }
