@@ -1,0 +1,55 @@
+name: "BİLKOD - Yeni Oyun Yayınla"
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: bilkod-oyunlar-json
+  cancel-in-progress: false
+
+jobs:
+  yayinla:
+    if: >-
+      github.event.issue.user.login == 'bilfen-bilkod' &&
+      startsWith(github.event.issue.title, '[BİLKOD OYUN]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          ref: main
+      - name: Oyunu doğrula ve listeye ekle
+        id: add
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          python3 .github/scripts/yeni_oyun.py
+          git diff --exit-code -- oyunlar.json && { echo "Değişiklik yok."; exit 1; } || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add oyunlar.json
+          git commit -m "BİLKOD: oyun #${{ github.event.issue.number }} eklendi"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Başarılı yayınlama bilgisini ekle
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "✅ Oyun listeye eklendi. GitHub Pages güncellemesi tamamlandığında BİLKOD Dijital Oyun Atölyesi'nde görünecek."
+          gh issue close "$ISSUE_NUMBER" --reason completed
+      - name: Hata durumunda bilgi ver
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "⚠️ Oyun otomatik yayınlanamadı. Lütfen bu isteğin **Actions** kaydındaki hata mesajını kontrol edin. Mevcut oyun listesi değiştirilmedi (veya işlem kısmen tamamlanmış olabilir)."
