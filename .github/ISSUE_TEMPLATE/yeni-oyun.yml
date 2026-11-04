@@ -23,11 +23,19 @@ body:
       placeholder: https://bilfen-bilkod.github.io/uzayda-kodlama/
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: kategori
     attributes:
       label: Kategori
-      placeholder: Kodlama
+      description: Oyun için uygun kategoriyi seçin.
+      options:
+        - Kodlama
+        - Algoritma
+        - Dikkat ve Hafıza
+        - Sanat ve Tasarım
+        - Yapboz
+        - Tasarım ve İnşa
+        - Diğer
     validations:
       required: true
   - type: input
