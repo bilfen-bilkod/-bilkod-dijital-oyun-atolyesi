@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0757a7">
+  <meta name="description" content="BİLKOD Dijital Oyun Atölyesi: Bilfen Anaokulları için okulda ve evde kullanılabilen eğitici dijital oyunlar.">
+  <title>BİLKOD | Dijital Oyun Atölyesi</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="yedek-oyunlar.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <svg class="svg-symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol><symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol><symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.5 8.2c0 4.4-8.5 10-8.5 10s-8.5-5.6-8.5-10c0-2.7 1.9-4.7 4.5-4.7 1.8 0 3.1 1 4 2.2.9-1.2 2.3-2.2 4-2.2 2.6 0 4.5 2 4.5 4.7Z"/></symbol><symbol id="icon-link" viewBox="0 0 24 24"><path d="M9 15 15 9M8 8h-1a5 5 0 0 0 0 10h3a5 5 0 0 0 4-2m-4-8a5 5 0 0 1 4-2h3a5 5 0 0 1 0 10h-1"/></symbol><symbol id="icon-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M12 16v5m-5 0h10"/></symbol><symbol id="icon-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></symbol><symbol id="icon-home" viewBox="0 0 24 24"><path d="m2 11 10-8 10 8M5 10v11h14V10M10 21v-7h4v7"/></symbol><symbol id="icon-touch" viewBox="0 0 24 24"><path d="M9 13V6a2 2 0 0 1 4 0v5m0-2a2 2 0 0 1 4 0v3m0-2a2 2 0 0 1 4 0v6c0 3-2 5-5 5h-4c-2 0-4-2-5-4L3 13a2 2 0 0 1 3-2l3 2"/></symbol><symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3L22 9.3l-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1Z"/></symbol><symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="m12 1 2.8 7.2L22 11l-7.2 2.8L12 21l-2.8-7.2L2 11l7.2-2.8ZM20 19l1 2m-19-2 1 2"/></symbol><symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="icon-screen" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol><symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol></svg>
+  <a class="skip-link" href="#oyunlar">Oyunlara geç</a>
+  <header class="site-header" id="ana-sayfa">
+    <div class="container header-layout">
+      <a class="logo-link" href="#ana-sayfa" aria-label="BİLKOD ana sayfa"><img src="assets/bilfen-logo.webp" width="195" height="94" alt="Bilfen Anaokulları logosu"></a>
+      <a href="#ana-sayfa" class="header-wordmark"><span>BİLKOD</span><small>DİJİTAL OYUN ATÖLYESİ</small></a>
+      <nav class="header-nav" id="menu" aria-label="Ana menü">
+        <a href="#ana-sayfa" class="nav-current">Ana Sayfa</a><a href="#yeni-oyunlar">Yeni Oyunlar</a><a href="#oyunlar">Oyunlar</a><a href="#ogretmen">Öğretmen Köşesi</a>
+      </nav>
+      <button class="mobile-menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç"><svg class="icon"><use href="#icon-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="cloud cloud-three"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow"><svg class="icon"><use href="#icon-star"/></svg> BİLFEN ANAOKULLARI SUNAR</span>
+          <h1 id="heroTitle"><span class="hero-big-title">BİLKOD</span><span class="hero-sub-title">DİJİTAL OYUN ATÖLYESİ</span></h1>
+          <p class="hero-lead">Okulda da evde de <strong>eğlenceli öğrenme!</strong></p>
+          <p class="hero-desc">Kodla, keşfet, tasarla, oyna! Bilkodi ile birbirinden eğlenceli dijital oyunlar seni bekliyor.</p>
+          <div class="hero-buttons"><a class="button button-primary hero-cta" href="#oyunlar">Oyunları Keşfet <svg class="icon"><use href="#icon-arrow"/></svg></a><a class="button button-ghost" href="#yeni-oyunlar">Yeni Oyunlar <svg class="icon"><use href="#icon-sparkle"/></svg></a></div>
+          <span class="hero-small-note"><span class="small-check">✓</span> Ücretsiz erişim · Üyelik gerektirmez</span>
+        </div>
+        <div class="hero-visual"><div class="hero-sun" aria-hidden="true"></div><div class="hero-blob" aria-hidden="true"></div><img class="hero-robot" src="assets/bilkodi.webp" alt="Ellerini neşeyle kaldırmış Bilkodi robot karakteri" width="762" height="858"><span class="hero-floating floating-one" aria-hidden="true">✦</span><span class="hero-floating floating-two" aria-hidden="true">✦</span></div>
+      </div>
+      <div class="hero-hill" aria-hidden="true"></div>
+    </section>
+
+    <section class="feature-strip container" aria-label="Platform özellikleri">
+      <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#icon-board"/></svg></span><span>Akıllı Tahta<br>Uyumlu</span></div>
+      <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#icon-phone"/></svg></span><span>Tablet ve Telefon<br>Desteği</span></div>
+      <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#icon-home"/></svg></span><span>Evden<br>Erişim</span></div>
+      <div class="feature"><span class="feature-icon"><svg class="icon"><use href="#icon-touch"/></svg></span><span>Dokunmatik<br>Kullanım</span></div>
+    </section>
+
+    <section class="section latest-section container" id="yeni-oyunlar">
+      <div class="section-intro"><div><span class="section-kicker"><svg class="icon"><use href="#icon-sparkle"/></svg> YENİ KEŞİFLER</span><h2>Yeni Eklenen Oyunlar <span class="title-spark">✦</span></h2><p>Atölyemize katılan yeni maceraları keşfet!</p></div><a class="text-link" href="#oyunlar">Tüm oyunları gör <svg class="icon"><use href="#icon-arrow"/></svg></a></div>
+      <div class="latest-grid" id="latestGrid" aria-live="polite"><p class="load-message">Oyunlar yükleniyor…</p></div>
+    </section>
+
+    <section class="library-wrap" id="oyunlar">
+      <div class="container section">
+        <div class="library-heading"><span class="section-kicker"><svg class="icon"><use href="#icon-star"/></svg> BİRLİKTE OYNAYALIM</span><h2>Oyun Kütüphanesi</h2><p>Bir oyun seç, büyük bir maceraya başla!</p></div>
+        <div class="filters-panel">
+          <label class="search-box"><svg class="icon"><use href="#icon-search"/></svg><span class="sr-only">Oyun ara</span><input id="searchInput" type="search" placeholder="Hangi oyunu arıyorsun?" autocomplete="off" spellcheck="false" aria-label="Oyun ara"></label>
+          <div class="filter-row"><div class="category-filters" id="categoryFilters" aria-label="Oyun kategorileri"><button type="button" class="filter-pill active" data-category="Tümü" aria-pressed="true">Tüm Oyunlar</button></div><button type="button" class="favorites-filter" id="favoritesFilter" aria-pressed="false"><svg class="icon"><use href="#icon-heart"/></svg> Favorilerim</button></div>
+          <div class="result-row"><span id="resultCount">9 oyun seni bekliyor</span><button type="button" id="resetFilters" class="plain-link" hidden>Filtreleri temizle</button></div>
+        </div>
+        <div class="games-grid" id="gamesGrid" aria-live="polite"><p class="load-message">Oyunlar yükleniyor…</p></div>
+        <div class="empty-state" id="emptyState" hidden><div class="empty-icon">🔎</div><h3>Burada henüz oyun yok</h3><p>Başka bir oyun adı veya kategori deneyebilirsin.</p><button type="button" class="button button-primary" id="emptyReset">Tüm oyunları göster</button></div>
+      </div>
+    </section>
+
+    <section class="container section teacher-section" id="ogretmen">
+      <div class="teacher-panel"><div class="teacher-illustration" aria-hidden="true"><svg class="icon"><use href="#icon-screen"/></svg><span>✦</span></div><div class="teacher-copy"><span class="section-kicker">ÖĞRETMEN & VELİ KÖŞESİ</span><h2>Öğrenme her yerde devam etsin!</h2><p>Okulda akıllı tahtadan, evde tablet veya telefondan oyun bağlantısına dokunmanız yeterli. Oyun kartlarındaki bağlantı simgesiyle istediğiniz oyunun adresini kopyalayıp paylaşabilirsiniz.</p><div class="teacher-actions"><button type="button" class="button button-primary" id="fullscreenBtn">Siteyi Tam Ekran Aç <svg class="icon"><use href="#icon-arrow"/></svg></button><a href="yonetim.html" class="button button-outline">Oyun Listesini Yönet</a></div><p class="teacher-mini">Not: Tam ekran özelliği tarayıcı desteğine bağlıdır. Açılan oyunların kendi tam ekran kontrolleri olabilir.</p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><div class="footer-brand"><strong>BİLKOD</strong> <span>Dijital Oyun Atölyesi</span></div><span>Bilfen Anaokulları için dijital oyun platformu</span><a href="#ana-sayfa">Yukarı çık ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
