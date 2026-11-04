@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 260" role="img" aria-label="Botley ile Keşfet: rakamlar, gezegenler ve mevsimler">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#125cb7"/><stop offset="1" stop-color="#50a9eb"/></linearGradient><filter id="sh"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#0a3578" flood-opacity=".28"/></filter></defs>
+<rect width="380" height="260" rx="26" fill="url(#bg)"/>
+<circle cx="44" cy="50" r="50" fill="#fff" opacity=".07"/><circle cx="351" cy="240" r="89" fill="#fff" opacity=".09"/>
+<g filter="url(#sh)"><rect x="22" y="25" width="99" height="51" rx="17" fill="#fff"/><text x="71" y="57" fill="#1359b4" font-family="Arial,sans-serif" font-size="27" font-weight="900" text-anchor="middle">1 2 3</text></g>
+<g transform="translate(304 50)" filter="url(#sh)"><circle r="29" fill="#ffe68a"/><circle cx="-7" cy="-6" r="19" fill="#efb659"/><ellipse rx="42" ry="12" transform="rotate(-25)" stroke="#fff3cb" stroke-width="7" fill="none"/></g>
+<g transform="translate(39 207)" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M0-19V19M-19 0H19M-14-14 14 14M14-14-14 14"/></g>
+<g transform="translate(321 185)"><circle r="21" fill="#ffdb66"/><g stroke="#fff2aa" stroke-width="5" stroke-linecap="round"><path d="M0-30v-8M0 30v8M-30 0h-8M30 0h8"/></g></g>
+<g filter="url(#sh)">
+<ellipse cx="192" cy="231" rx="91" ry="10" fill="#0a3778" opacity=".22"/>
+<rect x="123" y="72" width="141" height="123" rx="45" fill="#f8fdff"/>
+<rect x="135" y="85" width="117" height="81" rx="29" fill="#0c2650"/>
+<rect x="166" y="63" width="57" height="17" rx="9" fill="#e6f5ff"/><circle cx="195" cy="61" r="10" fill="#ffd15c"/>
+<path d="M157 117 Q169 106 181 118 M207 118 Q219 106 231 117" fill="none" stroke="#65dbff" stroke-width="8" stroke-linecap="round"/>
+<path d="M175 139 Q194 154 214 139" fill="none" stroke="#ffa2c2" stroke-width="6" stroke-linecap="round"/>
+<circle cx="144" cy="133" r="5" fill="#ff98b5"/><circle cx="245" cy="133" r="5" fill="#ff98b5"/>
+<rect x="141" y="178" width="105" height="45" rx="17" fill="#edf8ff"/><rect x="174" y="184" width="42" height="26" rx="9" fill="#ffcf5a"/>
+<rect x="122" y="193" width="24" height="29" rx="10" fill="#1764bd"/><rect x="242" y="193" width="24" height="29" rx="10" fill="#1764bd"/>
+<circle cx="141" cy="220" r="20" fill="#16437c"/><circle cx="249" cy="220" r="20" fill="#16437c"/>
+<circle cx="141" cy="220" r="9" fill="#8cdef8"/><circle cx="249" cy="220" r="9" fill="#8cdef8"/>
+</g><g fill="#fff" opacity=".75"><circle cx="275" cy="123" r="3"/><circle cx="293" cy="139" r="2"/><circle cx="89" cy="117" r="3"/></g></svg>
