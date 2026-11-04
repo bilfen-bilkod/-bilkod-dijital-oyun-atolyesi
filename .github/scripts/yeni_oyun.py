@@ -34,15 +34,23 @@ def single_line(value, name, max_length):
 def game_url(value):
     value = single_line(value, "Oyun bağlantısı", 250)
     parsed = urlsplit(value)
+    if parsed.scheme != "https" or parsed.query or parsed.fragment:
+        raise ValueError("Oyun bağlantısı https:// ile başlamalı ve sorgu içermemelidir.")
+    if parsed.netloc.lower() == "github.com":
+        match = re.fullmatch(
+            r"/bilfen-bilkod/([a-zA-Z0-9._-]+)(?:/settings/pages)?/?",
+            parsed.path,
+            flags=re.IGNORECASE,
+        )
+        if not match:
+            raise ValueError("Sadece bilfen-bilkod hesabındaki GitHub depo veya Pages ayar bağlantıları kabul edilir.")
+        return "https://bilfen-bilkod.github.io/" + match.group(1) + "/"
     if (
-        parsed.scheme != "https"
-        or parsed.netloc.lower() != "bilfen-bilkod.github.io"
+        parsed.netloc.lower() != "bilfen-bilkod.github.io"
         or not re.fullmatch(r"/[a-zA-Z0-9._-]+/?", parsed.path)
-        or parsed.query
-        or parsed.fragment
     ):
         raise ValueError("Oyun bağlantısı bilfen-bilkod.github.io/oyun-adi/ biçiminde olmalıdır.")
-    return urlunsplit(("https", "bilfen-bilkod.github.io", parsed.path.rstrip("/") + "/", "", ""))
+    return urlunsplit(("https", "bilfen-bilkod.github.io", parsed.path.rstrip("/") + "/", ""))
 
 
 def cover_url(value):
